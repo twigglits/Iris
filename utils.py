@@ -7,7 +7,7 @@ from loguru import logger
 
 
 def load_iris_data():
-    logger.info("Loading iris data with species")
+    logger.info("Loading iris data with species.")
     iris = datasets.load_iris()
     df = (
         pd.DataFrame(
@@ -19,5 +19,5 @@ def load_iris_data():
             species=lambda x: x["target"].map(dict(enumerate(iris["target_names"])))
         )
     )
-    logger.success("Done: Iris data loaded")
+    logger.success("Done: Iris data loaded.")
     return df
